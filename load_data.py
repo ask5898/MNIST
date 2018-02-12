@@ -107,6 +107,6 @@ def savetxt(file,ndarray) :
 
 data_dir = os.path.join("data")
 
-savetxt(os.path.join(data_dir,"Train-28x28_cntk_text.txt"),train)
-savetxt(os.path.join(data_dir,"Test-28x28_cntk_text.txt"),test)
+savetxt(os.path.join(data_dir,"Train.txt"),train)
+savetxt(os.path.join(data_dir,"Test.txt"),test)
 print "Done Bro"

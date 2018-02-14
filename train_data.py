@@ -137,8 +137,8 @@ eval_minibatch = 25
 
 data = eval_reader.next_minibatch(eval_minibatch,input_map = eval_map)
 
-img_label = data[labels].asarray()
-img_feature = data[input].asarray()
+img_label = [lab for lab,inp in data.items()]
+img_feature = [inp for lab,inp in data.items()]
 
 img_eval = [out.eval(img_feature[i]) for i in range(len(img_feature))]
 
